@@ -1,4 +1,5 @@
 # bulk_rnaseq_tutorial
+- required tools: [Docker](https://docs.docker.com/get-started/get-docker/), [GNU Make](https://www.gnu.org/software/make/)
 
 ## download repo
 ```

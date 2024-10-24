@@ -1,5 +1,6 @@
 # bulk_rnaseq_tutorial
 - required tools: [Docker](https://docs.docker.com/get-started/get-docker/), [GNU Make](https://www.gnu.org/software/make/)
+- [installation help](https://ubc-dsci.github.io/dsci-310-student/install_stack_mac.html)
 
 ## download repo
 ```

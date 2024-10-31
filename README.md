@@ -1,11 +1,6 @@
 # bulk_rnaseq_tutorial
-<<<<<<< HEAD
 - required tools: [Docker](https://docs.docker.com/get-started/get-docker/)
 - make sure you have a dockerhub account
-=======
-- required tools: [Docker](https://docs.docker.com/get-started/get-docker/), [GNU Make](https://www.gnu.org/software/make/)
-- [installation help](https://ubc-dsci.github.io/dsci-310-student/install_stack_mac.html)
->>>>>>> 45a8999ff25378852daea8b786b4e8bbb243415f
 
 ## run project locally
 

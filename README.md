@@ -44,7 +44,7 @@ make configsra
 - enable remote access (hit tab to move and hit enter to select)
 - save and exit
 
-### 6) prefect SRA file
+### 6) prefetch SRA file
 - the prefetch tool downloads all necessary files to your computer. 
 
 ```
@@ -58,6 +58,7 @@ make extractsra
 ```
 
 ### 7) apply FASTQC on FASTQ files
+- add to links to docs
 ```
 make fastqc
 ```

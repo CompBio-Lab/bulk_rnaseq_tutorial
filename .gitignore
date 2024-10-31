@@ -1,4 +1,6 @@
 .DS_Store
-data/
-results/
+local/data/
+local/results/
+hpc/data/
+hpc/results/
 analysis/*.log

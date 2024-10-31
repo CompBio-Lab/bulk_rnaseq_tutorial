@@ -8,7 +8,7 @@ build:
 
 # run interactive docker image
 run:
-	docker run -it -v /Users/asingh/Documents/cbl/methods/bulk_rnaseq:/home $(DOCKERHUB_USERNAME)/$(IMAGE_NAME):$(IMAGE_VERSION)
+	docker run -it -v $(shell pwd):/home $(DOCKERHUB_USERNAME)/$(IMAGE_NAME):$(IMAGE_VERSION)
 
 # push docker image to dockerhub
 push:

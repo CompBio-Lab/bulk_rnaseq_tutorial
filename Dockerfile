@@ -21,6 +21,21 @@ RUN apt-get update -y && apt-get install -y \
   zlib1g \
   zlib1g-dev
 
+# install seqtk
+RUN git clone https://github.com/lh3/seqtk.git && \
+    cd seqtk && \
+    make
+ENV PATH="${PATH}:/seqtk/"
+
+# install SRAToolkit
+# https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
+ARG SRA_VER="3.0.0"
+# RUN apt-get update && apt-get install --yes make libz-dev procps pigz
+RUN wget --output-document sratoolkit.tar.gz https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/${SRA_VER}/sratoolkit.${SRA_VER}-ubuntu64.tar.gz && \
+    tar -vxzf sratoolkit.tar.gz && \
+    rm sratoolkit.tar.gz
+RUN cp -r /sratoolkit.${SRA_VER}-ubuntu64/bin/* /usr/bin
+
 # install fastqc
 ARG FASTQC_VER="0.11.8"
 RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v${FASTQC_VER}.zip && \

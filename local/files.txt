@@ -1,0 +1,1 @@
+data/SRR24640458_1_sample.fastq  data/SRR24640458_2_sample.fastq SRR24640458

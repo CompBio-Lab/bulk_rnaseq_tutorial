@@ -13,3 +13,8 @@ run:
 # push docker image to dockerhub
 push:
 	docker push $(DOCKERHUB_USERNAME)/$(IMAGE_NAME):$(IMAGE_VERSION)
+
+# pull docker image to hpc
+sockeye_pull:
+	module load apptainer; \
+	apptainer pull --name rnaseq.sif docker://$(DOCKERHUB_USERNAME)/$(IMAGE_NAME):$(IMAGE_VERSION)

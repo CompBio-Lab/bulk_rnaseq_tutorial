@@ -4,3 +4,6 @@ local/results/
 hpc/data/
 hpc/results/
 analysis/*.log
+*.sif
+hpc/*.log
+hpb/*.err */

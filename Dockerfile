@@ -1,4 +1,4 @@
-FROM ubuntu:mantic-20230926
+FROM ubuntu:plucky-20241213
 
 # install dependencies; cleanup apt garbage
 RUN apt-get update -y && apt-get install -y \
@@ -57,6 +57,9 @@ RUN wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-${HISAT2_VER
     unzip hisat2-${HISAT2_VER}-Linux_x86_64.zip && \
     rm hisat2-${HISAT2_VER}-Linux_x86_64.zip
 ENV PATH="${PATH}:/hisat2-${HISAT2_VER}/"
+
+# required for hisat2-build
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # HTSlib
 ENV HTSLIB_INSTALL_DIR=/opt/htslib
